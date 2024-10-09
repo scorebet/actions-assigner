@@ -25,6 +25,10 @@ const handle = async (token, reviewers, teamReviewers) => {
 const assign = async (octokit) => {
   try {
     const { owner, repo, number } = context.issue
+    const assignee = context.actor 
+    if (context.actor == 'dependabot[bot]') {
+      assignee = 'scorebet-bot'
+    }
     await octokit.issues.addAssignees({
       owner: owner,
       repo: repo,
