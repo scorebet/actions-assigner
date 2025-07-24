@@ -30,7 +30,8 @@
   },
   "devDependencies": {
     "@zeit/ncc": "^0.22.3",
-    "standard": "^17.1.2"
+    "standard": "^17.1.2",
+    "cross-spawn": "^7.0.6"
   },
   "standard": {
     "ignore": [
